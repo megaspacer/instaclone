@@ -1,0 +1,80 @@
+.post {
+    margin-left: auto;
+    margin-right: auto;
+    width: 614px;
+    min-height: 60px + 614px + 120px;
+    border: 0.8px solid $light-grey;
+    box-shadow: 0 2px 4px $light-grey; 
+
+// Пользователь
+    .user {
+        width: 614px;
+        height: 60px;
+        padding-top: 15px;
+        padding-bottom: 15px; 
+        padding-left: 15px; 
+        border-bottom: 0.8px solid $light-grey;
+        align-items: center;
+        display: flex;
+        .user-image {
+            width: 35px;
+            height: 35px;
+        }
+        .user-name {
+            padding-left: 15px;
+        }
+    }
+
+// Фото
+    .photo {
+        //width: 100%;
+        width: 614px - 1.6px;
+        height: 614px;
+        border-bottom: 0.8px solid $light-grey;
+    }
+
+// Комментариии и лайки
+    .post-footer {
+        width: 100%;
+        min-height: 120px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        border-bottom: 0.8px solid $light-grey;
+        // иконки
+        .icon-like {
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
+        }
+        .icon-comment {
+            width: 30px;
+            height: 30px;
+        }
+        // пример комментария
+        .comment {
+            display: flex;
+            margin-top: 15px;
+            .user-acc {
+                font-weight: bold;
+            }
+            .text {
+                margin-left: 15px;
+            }
+        }
+        // добавление комментария
+        .add-comment {
+            margin-top: 15px;
+            margin-right: 15px;
+            border-top: 0.8px solid $light-grey;
+            .input-comment {
+                height: 18px;
+                width: 542px;
+                margin-top: 15px;
+                border: 0;
+                outline: none;
+                font-size: 14px;
+            }
+        }
+    }
+}
