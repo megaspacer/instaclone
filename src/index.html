@@ -11,13 +11,13 @@
 
 <body>
     <!-- -->
-    <div class="modal">
+    <div class="modal modal--close">
         <div class="modal-content">
             <form>
                 <input type="text" placeholder="Описание">
-                <input type="text" placeholder="Ссылка">
+                <input type="text" placeholder="Ссылка на фото">
                 <button type="submit" class="btn btn-success">добавить</button>
-                <button type="reset">отмена</button>
+                <button type="reset" class="btn" id="reset">отмена</button>
             </form>
         </div>
     </div>
@@ -27,7 +27,7 @@
             <h1 class="logo-text">Insta Clone</h1>
         </div>
         <div class="header-right">
-            <button id="add-photo" class="btn" type="button">добавить фото</button>
+            <button id="open-modal" class="btn" type="button">добавить фото</button>
         </div>
     </header>
     <section class="post">

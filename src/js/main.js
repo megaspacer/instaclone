@@ -1,4 +1,8 @@
-import addPhoto from './addPhoto';
-const addBtn = document.querySelector('#add-photo');
+import Modal from './modal';
+const openModalBtn = document.querySelector('#open-modal');
+const closeModalBtn = document.querySelector('#reset');
 
-addBtn.addEventListener('click', addPhoto);
+const modal = new Modal();
+
+openModalBtn.addEventListener('click', modal.openModal);
+closeModalBtn.addEventListener('click', modal.closeModal);
