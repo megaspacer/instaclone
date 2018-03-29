@@ -1,4 +1,4 @@
-import moment from 'moment';
+//import moment from 'moment';
 import firebase from './config';
 import Modal from './modal';
 import getAllPosts from './getAllPosts';
@@ -12,11 +12,10 @@ const modal = new Modal();
 export default (e) => {
     e.preventDefault();
     const ref = firebase.database().ref('posts');
-    const createdAt = moment().format('DD-MM-YYYY HH:mm:ss');
     ref.push({
         description: description.value,
         imageURL: imageURL.value,
-        createdAt: createdAt
+        createdAt: +new Date()
     });
     getAllPosts().then(data => {
         renderAllPosts(data);

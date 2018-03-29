@@ -3,7 +3,7 @@ const posts = document.querySelector('.posts');
 export default (arr) => {
     if (arr && Array.isArray(arr)) {
         posts.innerHTML = '';
-        arr.forEach(post => {
+        arr.sort((a, b) => b.createdAt - a.createdAt).forEach(post => {
             const section = document.createElement('section');
             section.classList.add('post');
             section.innerHTML = `
