@@ -1,10 +1,12 @@
 .post {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 60px;
     width: 614px;
-    min-height: 60px + 614px + 120px;
+    // min-height: 60px + 614px + 120px;
     border: 0.8px solid $light-grey;
     box-shadow: 0 2px 4px $light-grey; 
+    overflow: hidden; /*hide bounds of image */
 
 // Пользователь
     .user {
@@ -27,10 +29,12 @@
 
 // Фото
     .photo {
-        //width: 100%;
-        width: 614px - 1.6px;
-        height: 614px;
+        // width: 100%;
+        // position: absolute;
+        // clip: rect(614px, 614px, 614px, 614px);
         border-bottom: 0.8px solid $light-grey;
+        display: block; /*remove inline-block spaces*/
+        width: 100%; /*make image streatch*/
     }
 
 // Комментариии и лайки

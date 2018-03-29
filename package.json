@@ -55,6 +55,7 @@
     "startdist": "node app.js dist"
   },
   "dependencies": {
-    "firebase": "^4.11.0"
+    "firebase": "^4.11.0",
+    "moment": "^2.21.0"
   }
 }

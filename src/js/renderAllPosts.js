@@ -1,19 +1,30 @@
-import { isArray } from "util";
+const posts = document.querySelector('.posts');
 
-const someFunc = (arr) => {
-    const check = Array.isArray(arr);
-    if (check === true) {
-        let section = document.createElement('section');
-        console.log(section);
-        section.classList.add('post');
-        section.innerHTML = '<img class"photo" src="">'
-    };
- 
-someFunc(arr);
- 
-export default someFunc;
-    // проверить что там что то есть и это массив
-    // создаешь элемент section
-    // добавляешь класс post
-    // через InnerHTML добавить тэг img  с src и class
+export default (arr) => {
+    if (arr && Array.isArray(arr)) {
+        posts.innerHTML = '';
+        arr.forEach(post => {
+            const section = document.createElement('section');
+            section.classList.add('post');
+            section.innerHTML = `
+                <div class="user" id="${post.id}">
+                    <img class="user-image" src="assets/images/user.svg" alt="user">
+                    <div class="user-name">username</div>
+                </div>
+                <img class="photo" src="${post.imageURL}" alt="post photo">
+                <div class="post-footer">
+                    <img class="icon-like" src="assets/images/like.svg" alt="like" >
+                    <img class="icon-comment" src="assets/images/comment.svg" alt="comment" >
+                    <div class="comment">
+                        <span class="user-acc">username</span>
+                        <span class="text">${post.description}</span>
+                    </div>
+                    <div class="add-comment">
+                        <input class="input-comment" type="text" placeholder="Добавьте комментарий...">
+                    </div>
+                </div>
+            `;
+            posts.appendChild(section);
+        });
+    }
 };
