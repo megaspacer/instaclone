@@ -1,4 +1,3 @@
-//import moment from 'moment';
 import firebase from './config';
 import Modal from './modal';
 import getAllPosts from './getAllPosts';
